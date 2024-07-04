@@ -5,6 +5,8 @@ import Tools from './Tools';
 import { Route,Routes } from 'react-router-dom';
 import Groceries from './Groceries';
 import Groc from './Groc';
+import Too from './Too';
+import Elecs from './Elec'
 import { useState } from 'react';
 
 
@@ -18,8 +20,8 @@ function App() {
   <Routes>
     <Route path='/' element={<Home/>}/>
     <Route path='groceries' element={<Groceries list={Groc} cart={cart} setcart={setCart}/>}/>
-    <Route path='electronics' element={<Electonics/>}/>
-    <Route path='tools' element={<Tools/>}/>
+    <Route path='electronics' element={<Electonics list={Elecs} cart={cart} setcart={setCart}/>}/>
+    <Route path='tools' element={<Tools list={Too} cart={cart} setcart={setCart}/>}/>
     
   </Routes>
   
