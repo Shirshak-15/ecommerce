@@ -7,11 +7,16 @@ import Groceries from './Groceries';
 import Groc from './Groc';
 import Too from './Too';
 import Elecs from './Elec'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 function App() {
-  const[cart, setCart]=useState([{}]);
+  const initialCart = JSON.parse(localStorage.getItem('cart')) || [];
+  const[cart, setCart]=useState(initialCart);
+
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }, [cart]);
   
   return (
  <div>
