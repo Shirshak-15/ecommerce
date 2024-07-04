@@ -1,4 +1,5 @@
 import React from "react";
+import Cartfooter from "./cartfooter";
 
 const Electonics=(props)=>{
     const handleclick = (newitem) => {
@@ -17,7 +18,7 @@ const Electonics=(props)=>{
 
         })}</div>
         {console.log(props.cart)}
-
+ <Cartfooter/>
     </div>
 
     );

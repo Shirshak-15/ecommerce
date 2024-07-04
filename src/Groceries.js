@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Cartfooter from './cartfooter';
 
 const Groceries = (props) => {
     const handleclick = (newitem) => {
@@ -21,6 +22,7 @@ const Groceries = (props) => {
         })}</div>
             
             {console.log(props.cart)}
+            <Cartfooter/>
         </div>
     );
 }

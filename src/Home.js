@@ -16,6 +16,7 @@ const Home=()=>{
     {
         navigate('/tools');
     }
+   
     
     return(<div className="pagediv">
         
