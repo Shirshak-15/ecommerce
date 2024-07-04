@@ -1,24 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './Home';
+import Electonics from './Electronics';
+import Tools from './Tools';
+import { Route,Routes } from 'react-router-dom';
+import Groceries from './Groceries';
+import Groc from './Groc';
+import { useState } from 'react';
+
 
 function App() {
+  const[cart, setCart]=useState([{}]);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+ <div>
+  <div className='centerDiv'>ECOMMERCE-WEBSITE</div>
+  
+  <Routes>
+    <Route path='/' element={<Home/>}/>
+    <Route path='groceries' element={<Groceries list={Groc} cart={cart} setcart={setCart}/>}/>
+    <Route path='electronics' element={<Electonics/>}/>
+    <Route path='tools' element={<Tools/>}/>
+    
+  </Routes>
+  
+ </div>
+ 
   );
 }
 
