@@ -29,7 +29,7 @@ function App() {
     <Route path='groceries' element={<Groceries list={Groc} cart={cart} setcart={setCart}/>}/>
     <Route path='electronics' element={<Electonics list={Elecs} cart={cart} setcart={setCart}/>}/>
     <Route path='tools' element={<Tools list={Too} cart={cart} setcart={setCart}/>}/>
-    <Route path ='cart' element ={<Cart/>}></Route>
+    <Route path ='cart' element ={<Cart cart={cart} setcart={setCart}/> }></Route>
   </Routes>
     
   

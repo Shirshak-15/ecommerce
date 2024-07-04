@@ -17,7 +17,7 @@ const Electonics=(props)=>{
                 
 
         })}</div>
-        {console.log(props.cart)}
+      
  <Cartfooter/>
     </div>
 

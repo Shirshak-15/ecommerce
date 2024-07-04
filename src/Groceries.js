@@ -21,7 +21,7 @@ const Groceries = (props) => {
 
         })}</div>
             
-            {console.log(props.cart)}
+          
             <Cartfooter/>
         </div>
     );

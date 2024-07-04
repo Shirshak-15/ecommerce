@@ -21,7 +21,7 @@ const Tools = (props) => {
 
         })}</div>
             <Cartfooter/>
-            {console.log(props.cart)}
+          
         </div>
     );
 }
