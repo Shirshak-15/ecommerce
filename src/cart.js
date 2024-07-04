@@ -16,6 +16,12 @@ const Cart = (props) => {
     props.setcart(updatedCart);
   };
 
+   const addItem = (newItem) => {
+    const updatedCart = [...cartItems, newItem];
+    localStorage.setItem('cart', JSON.stringify(updatedCart));
+    setCartItems(updatedCart);
+    props.setcart(updatedCart);
+  };
   const totalPrice = cartItems.reduce(
     (total, item) => total + +item.price,
     0
@@ -32,6 +38,7 @@ const Cart = (props) => {
         {cartItems.map((item, index) => (
           <li key={index} className="cart-item">
             {item.name}: Rs {item.price}
+            <button onClick ={()=>addItem(item)}style={{backgroundColor:'green'}}>Add➕</button>
             <button onClick={() => deleteItem(index)}>Delete❌</button>
             
           </li>
