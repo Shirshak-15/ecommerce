@@ -61,3 +61,44 @@
 text-align: center;
 background-color:burlywood;
 }
+
+.itemcard{
+ height: 120px;
+ width: 120px;
+ border: black solid;
+ border-radius: 20px;
+ border-width: 1px;
+ padding: 20px;
+ margin: 15px;
+ text-align: center;
+}
+  
+
+
+
+.itempage{
+  
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+ 
+        
+
+}
+
+.itembutton
+{
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 3px
+}
+
+.itembutton:hover {
+  background-color: #45a049;
+}
